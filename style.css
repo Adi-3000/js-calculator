@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   width: 600fr;
   height: 600px;
 
 }
 
 .calci {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   width: 60%;
