@@ -1,0 +1,98 @@
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 600fr;
+    height: 600px;
+    
+}
+.calci{
+
+    display:flex ;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    max-width: 300px; 
+    background-color: #f7f7f1;
+    border-radius: 12%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+.input-container {
+    position: relative;
+    margin: 30px auto;
+    width: 200px;
+    height: 30px;
+    display: flex;
+  }
+  
+  .input-container input[type="text"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 08px;
+    left: 35%;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label,
+  .input-container input[type="text"]:valid ~ .label {
+    top: -15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline,
+  .input-container input[type="text"]:valid ~ .underline {
+    
+    transform: scaleX(1);
+  }
+
+  /*buttons*/
+
+
+  button {
+    background-color: white;
+    color: black;
+    border-radius: 10em;
+    font-size: 08px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+  }
+  
+  button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+  };
+  
+  button:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+  };
+  
