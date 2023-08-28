@@ -29,6 +29,7 @@
   
   .input-container input[type="text"] {
     font-size: 20px;
+    color: rgb(82, 79, 79);
     width: 100%;
     border: none;
     border-bottom: 2px solid #ccc;
