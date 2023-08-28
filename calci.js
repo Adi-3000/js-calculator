@@ -45,9 +45,15 @@ function butn0(){
 function ac(){
     var input = document.getElementById("input");
     input.value="";
+    var lable = document.getElementById("lable");
+    lable.innerText="Enter the expression";
 }
 function del(){
     var input = document.getElementById("input");
+    let value=input.value;
+    if(value=="Infinity"||value=='Error'){
+        input.value="";
+    }
     input.value=input.value.substr(0,input.value.length-1);
 }
 function para1(){
@@ -78,3 +84,19 @@ function dot(){
     var input = document.getElementById("input");
     input.value+=".";
 }
+function equal() {
+    var input = document.getElementById("input");
+    var result=0;
+    try {
+      result = eval(input.value);
+      if (result.toString().indexOf('.') !== -1) {
+        result = result.toFixed(4);
+      }
+    } catch (e) {
+      result = 'Error';
+    }
+    var lable = document.getElementById("lable");
+    lable.innerText=input.value;
+    input.value=result.toString();
+
+  }
